@@ -14,7 +14,7 @@ export function AboutPage() {
                     <h1 className="text-5xl lg:text-6xl font-bold mb-6">
                         Building the Future of
                         <br />
-                        <span className="text-gradient-cyber">Backend Development</span>
+                        <span className="text-gradient-primary">Backend Development</span>
                     </h1>
                     <p className="text-xl text-text-secondary max-w-3xl mx-auto">
                         BackForge was created by developers, for developers. We believe in shipping fast without compromising on quality.
@@ -39,7 +39,7 @@ export function AboutPage() {
                             production-ready code they can trust.
                         </p>
                     </div>
-                    <div className="card-neon p-8">
+                    <div className="card-premium p-8">
                         <div className="space-y-6">
                             {[
                                 { icon: Target, title: 'Quality First', desc: 'Every template is code-reviewed and tested' },
@@ -48,7 +48,7 @@ export function AboutPage() {
                                 { icon: Heart, title: 'Developer Love', desc: 'Made by developers who care' },
                             ].map((item, index) => (
                                 <div key={index} className="flex items-start space-x-4">
-                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-blue to-neon-cyan flex items-center justify-center flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0">
                                         <item.icon className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
@@ -75,7 +75,7 @@ export function AboutPage() {
                         { value: '99.9%', label: 'Satisfaction' },
                     ].map((stat, index) => (
                         <div key={index} className="card-glass text-center">
-                            <div className="text-5xl font-bold text-gradient-blue mb-2">{stat.value}</div>
+                            <div className="text-5xl font-bold text-gradient-accent mb-2">{stat.value}</div>
                             <div className="text-text-secondary">{stat.label}</div>
                         </div>
                     ))}
@@ -89,7 +89,7 @@ export function AboutPage() {
                     className="text-center"
                 >
                     <h2 className="text-4xl font-bold mb-6">
-                        Built by a Team of <span className="text-gradient-cyber">Passionate Developers</span>
+                        Built by a Team of <span className="text-gradient-primary">Passionate Developers</span>
                     </h2>
                     <p className="text-xl text-text-secondary max-w-3xl mx-auto">
                         We're a distributed team of backend engineers, DevOps specialists, and product designers

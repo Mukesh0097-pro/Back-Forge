@@ -13,7 +13,7 @@ export function PricingPage() {
                     className="text-center mb-12"
                 >
                     <h1 className="text-5xl lg:text-6xl font-bold mb-4">
-                        Choose Your <span className="text-gradient-cyber">Plan</span>
+                        Choose Your <span className="text-gradient-primary">Plan</span>
                     </h1>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Flexible pricing for developers and teams of all sizes
@@ -30,7 +30,7 @@ export function PricingPage() {
                     className="mt-20"
                 >
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Frequently Asked <span className="text-gradient-blue">Questions</span>
+                        Frequently Asked <span className="text-gradient-primary">Questions</span>
                     </h2>
 
                     <div className="max-w-3xl mx-auto space-y-6">
@@ -61,7 +61,7 @@ export function PricingPage() {
                                 className="card-glass"
                             >
                                 <h3 className="text-xl font-bold text-text-primary mb-2 flex items-start space-x-2">
-                                    <Check className="w-5 h-5 text-neon-cyan mt-1 flex-shrink-0" />
+                                    <Check className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                                     <span>{faq.q}</span>
                                 </h3>
                                 <p className="text-text-secondary ml-7">{faq.a}</p>

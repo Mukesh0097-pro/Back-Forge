@@ -111,7 +111,7 @@ export default router;`
                 >
                     <Link
                         to="/templates"
-                        className="inline-flex items-center space-x-2 text-text-secondary hover:text-neon-cyan transition-colors"
+                        className="inline-flex items-center space-x-2 text-text-secondary hover:text-primary transition-colors"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span>Back to Templates</span>
@@ -128,11 +128,11 @@ export default router;`
                             className="space-y-4"
                         >
                             <div className="flex items-center space-x-3">
-                                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-blue to-neon-cyan flex items-center justify-center shadow-neon-blue">
+                                <div className="w-16 h-16 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
                                     <Code2 className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
-                                    <h1 className="text-4xl font-bold text-gradient-blue">{template.title}</h1>
+                                    <h1 className="text-4xl font-bold text-text-primary">{template.title}</h1>
                                     <p className="text-text-secondary">
                                         {template.language} • {template.framework} • v{template.version}
                                     </p>
@@ -146,7 +146,7 @@ export default router;`
                                 {template.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="px-3 py-1 text-sm rounded-full bg-primary-blue/10 text-neon-cyan border border-primary-blue/30"
+                                        className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20"
                                     >
                                         {tag}
                                     </span>
@@ -159,13 +159,13 @@ export default router;`
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="card-neon"
+                            className="card-premium"
                         >
                             <h2 className="text-2xl font-bold mb-6">What's Included</h2>
                             <div className="grid md:grid-cols-2 gap-4">
                                 {template.features.map((feature, index) => (
                                     <div key={index} className="flex items-start space-x-3">
-                                        <Check className="w-5 h-5 text-neon-cyan mt-0.5 flex-shrink-0" />
+                                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                                         <span className="text-text-secondary">{feature}</span>
                                     </div>
                                 ))}
@@ -197,8 +197,8 @@ export default router;`
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 {template.techStack.map((tech, index) => (
                                     <div key={index} className="text-center">
-                                        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-blue/20 to-neon-cyan/20 flex items-center justify-center mx-auto mb-2">
-                                            <tech.icon className="w-8 h-8 text-neon-cyan" />
+                                        <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center mx-auto mb-2">
+                                            <tech.icon className="w-8 h-8 text-primary" />
                                         </div>
                                         <p className="text-sm text-text-secondary">{tech.name}</p>
                                     </div>
@@ -212,27 +212,27 @@ export default router;`
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="card-neon sticky top-24 space-y-6"
+                            className="card-premium sticky top-24 space-y-6"
                         >
                             {/* Price */}
                             <div>
-                                <div className="text-5xl font-bold text-gradient-blue mb-2">
+                                <div className="text-5xl font-bold text-text-primary mb-2">
                                     ${template.price}
                                 </div>
                                 <p className="text-text-secondary">One-time payment</p>
                             </div>
 
                             {/* Stats */}
-                            <div className="grid grid-cols-2 gap-4 py-4 border-y border-primary-blue/20">
+                            <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10">
                                 <div>
-                                    <div className="flex items-center space-x-1 text-neon-cyan mb-1">
+                                    <div className="flex items-center space-x-1 text-primary mb-1">
                                         <Star className="w-4 h-4 fill-current" />
                                         <span className="font-bold">{template.stars}</span>
                                     </div>
                                     <p className="text-xs text-text-secondary">Rating</p>
                                 </div>
                                 <div>
-                                    <div className="flex items-center space-x-1 text-neon-cyan mb-1">
+                                    <div className="flex items-center space-x-1 text-primary mb-1">
                                         <Download className="w-4 h-4" />
                                         <span className="font-bold">{template.downloads.toLocaleString()}</span>
                                     </div>
@@ -242,7 +242,7 @@ export default router;`
 
                             {/* CTAs */}
                             <div className="space-y-3">
-                                <button className="btn-neon w-full inline-flex items-center justify-center space-x-2">
+                                <button className="btn-primary w-full inline-flex items-center justify-center space-x-2">
                                     <Download className="w-5 h-5" />
                                     <span>Purchase Template</span>
                                 </button>
@@ -253,7 +253,7 @@ export default router;`
                             </div>
 
                             {/* Info */}
-                            <div className="text-sm text-text-secondary space-y-2 pt-4 border-t border-primary-blue/20">
+                            <div className="text-sm text-text-secondary space-y-2 pt-4 border-t border-white/10">
                                 <p>✓ Lifetime access</p>
                                 <p>✓ Free updates</p>
                                 <p>✓ 30-day money back</p>

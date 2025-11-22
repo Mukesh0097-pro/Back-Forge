@@ -43,7 +43,7 @@ export function ContactPage() {
                     className="text-center mb-16"
                 >
                     <h1 className="text-5xl lg:text-6xl font-bold mb-4">
-                        Get in <span className="text-gradient-cyber">Touch</span>
+                        Get in <span className="text-gradient-primary">Touch</span>
                     </h1>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Have a question or want to work together? We'd love to hear from you.
@@ -87,9 +87,9 @@ export function ContactPage() {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
-                                    className="card-glass flex items-start space-x-4 hover:border-neon-cyan transition-all duration-300 block"
+                                    className="card-glass flex items-start space-x-4 hover:border-primary transition-all duration-300 block"
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-blue to-neon-cyan flex items-center justify-center flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0">
                                         <contact.icon className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
@@ -107,7 +107,7 @@ export function ContactPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        <form onSubmit={handleSubmit} className="card-neon space-y-6">
+                        <form onSubmit={handleSubmit} className="card-premium space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
                                     Name
@@ -119,7 +119,7 @@ export function ContactPage() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="input-neon"
+                                    className="input-premium"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -135,7 +135,7 @@ export function ContactPage() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="input-neon"
+                                    className="input-premium"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -151,7 +151,7 @@ export function ContactPage() {
                                     value={formData.subject}
                                     onChange={handleChange}
                                     required
-                                    className="input-neon"
+                                    className="input-premium"
                                     placeholder="How can we help?"
                                 />
                             </div>
@@ -167,7 +167,7 @@ export function ContactPage() {
                                     onChange={handleChange}
                                     required
                                     rows={6}
-                                    className="input-neon resize-none"
+                                    className="input-premium resize-none"
                                     placeholder="Tell us more about your project..."
                                 />
                             </div>
@@ -175,7 +175,7 @@ export function ContactPage() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isSubmitted}
-                                className="btn-neon w-full inline-flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="btn-primary w-full inline-flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSubmitting ? (
                                     <span>Sending...</span>

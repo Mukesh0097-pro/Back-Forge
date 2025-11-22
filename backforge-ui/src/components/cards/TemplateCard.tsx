@@ -28,18 +28,18 @@ export function TemplateCard({
 }: TemplateCardProps) {
     return (
         <motion.div
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-            className="card-neon group cursor-pointer h-full flex flex-col"
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.2 }}
+            className="card-premium group cursor-pointer h-full flex flex-col"
         >
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-blue to-neon-cyan flex items-center justify-center shadow-neon-blue">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
                         <Code2 className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold text-text-primary group-hover:text-gradient-blue transition-all">
+                        <h3 className="text-xl font-bold text-text-primary group-hover:text-primary transition-colors">
                             {title}
                         </h3>
                         <p className="text-sm text-text-secondary">
@@ -47,9 +47,9 @@ export function TemplateCard({
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center space-x-1 text-neon-cyan">
+                <div className="flex items-center space-x-1 text-primary">
                     <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-semibold">{stars}</span>
+                    <span className="text-sm font-semibold text-text-primary">{stars}</span>
                 </div>
             </div>
 
@@ -63,27 +63,27 @@ export function TemplateCard({
                 {tags.slice(0, 3).map((tag) => (
                     <span
                         key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-primary-blue/10 text-neon-cyan border border-primary-blue/30"
+                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
                     >
                         {tag}
                     </span>
                 ))}
                 {tags.length > 3 && (
-                    <span className="px-3 py-1 text-xs rounded-full bg-primary-blue/10 text-text-secondary">
+                    <span className="px-3 py-1 text-xs rounded-full bg-white/5 text-text-secondary border border-white/10">
                         +{tags.length - 3}
                     </span>
                 )}
             </div>
 
             {/* Stats */}
-            <div className="flex items-center justify-between mb-4 pb-4 border-b border-primary-blue/20">
+            <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
                 <div className="flex items-center space-x-4 text-sm text-text-secondary">
                     <div className="flex items-center space-x-1">
                         <Download className="w-4 h-4" />
                         <span>{downloads.toLocaleString()}</span>
                     </div>
                 </div>
-                <div className="text-2xl font-bold text-gradient-blue">
+                <div className="text-2xl font-bold text-text-primary">
                     ${price}
                 </div>
             </div>
@@ -91,7 +91,7 @@ export function TemplateCard({
             {/* CTA */}
             <Link
                 to={`/template/${id}`}
-                className="btn-primary w-full inline-flex items-center justify-center space-x-2 group/btn"
+                className="btn-secondary w-full inline-flex items-center justify-center space-x-2 group/btn hover:bg-primary hover:border-primary hover:text-black"
             >
                 <span>View Details</span>
                 <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />

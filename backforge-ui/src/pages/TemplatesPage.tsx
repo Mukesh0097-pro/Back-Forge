@@ -95,7 +95,7 @@ export function TemplatesPage() {
                     className="text-center mb-12"
                 >
                     <h1 className="text-5xl lg:text-6xl font-bold mb-4">
-                        Backend <span className="text-gradient-cyber">Templates</span>
+                        Backend <span className="text-gradient-primary">Templates</span>
                     </h1>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Production-ready templates for your next project
@@ -117,7 +117,7 @@ export function TemplatesPage() {
                             placeholder="Search templates..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="input-neon pl-12 w-full"
+                            className="input-premium pl-12 w-full"
                         />
                     </div>
 
@@ -128,8 +128,8 @@ export function TemplatesPage() {
                                 key={lang}
                                 onClick={() => setSelectedLanguage(lang)}
                                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedLanguage === lang
-                                    ? 'bg-neon-cyan text-bg-deep shadow-neon-cyan'
-                                    : 'bg-bg-card text-text-secondary hover:text-neon-cyan border border-primary-blue/30'
+                                    ? 'bg-primary text-black shadow-lg shadow-primary/20'
+                                    : 'bg-white/5 text-text-secondary hover:text-primary hover:bg-white/10'
                                     }`}
                             >
                                 {lang === 'all' ? 'All Languages' : lang}

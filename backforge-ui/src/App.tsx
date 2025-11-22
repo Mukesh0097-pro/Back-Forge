@@ -7,6 +7,8 @@ import { PricingPage } from './pages/PricingPage'
 import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 
+import { DocsPage } from './pages/DocsPage'
+
 function App() {
   return (
     <Router>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/templates" element={<TemplatesPage />} />
           <Route path="/template/:id" element={<TemplateDetailPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/docs" element={<DocsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

@@ -19,73 +19,73 @@ const features = [
         icon: Zap,
         title: 'Lightning Fast',
         description: 'Optimized templates with best practices for maximum performance',
-        color: 'text-neon-cyan',
+        color: 'text-primary',
     },
     {
         icon: Shield,
         title: 'Production Ready',
         description: 'Battle-tested code used by thousands of developers worldwide',
-        color: 'text-primary-blue',
+        color: 'text-secondary',
     },
     {
         icon: Code2,
         title: 'Clean Code',
         description: 'Well-documented, maintainable code following industry standards',
-        color: 'text-sky-glow',
+        color: 'text-accent',
     },
     {
         icon: Database,
         title: 'Database Support',
         description: 'PostgreSQL, MongoDB, Redis, and more out of the box',
-        color: 'text-accent-purple',
+        color: 'text-primary',
     },
     {
         icon: Lock,
         title: 'Secure by Default',
         description: 'Built-in authentication, authorization, and security best practices',
-        color: 'text-neon-cyan',
+        color: 'text-secondary',
     },
     {
         icon: Cloud,
         title: 'Cloud Ready',
         description: 'Deploy to AWS, GCP, Azure, or any cloud provider instantly',
-        color: 'text-primary-blue',
+        color: 'text-accent',
     },
     {
         icon: GitBranch,
         title: 'Version Control',
         description: 'Git-friendly structure with comprehensive commit history',
-        color: 'text-sky-glow',
+        color: 'text-primary',
     },
     {
         icon: Terminal,
         title: 'CLI Tools',
         description: 'Powerful command-line tools for scaffolding and deployment',
-        color: 'text-accent-purple',
+        color: 'text-secondary',
     },
     {
         icon: Package,
         title: 'Modular Design',
         description: 'Pick and choose components you need, leave what you don\'t',
-        color: 'text-neon-cyan',
+        color: 'text-accent',
     },
     {
         icon: Settings,
         title: 'Configurable',
         description: 'Environment-based configuration for all deployment scenarios',
-        color: 'text-primary-blue',
+        color: 'text-primary',
     },
     {
         icon: Users,
         title: 'Team Friendly',
         description: 'Designed for collaboration with clear code organization',
-        color: 'text-sky-glow',
+        color: 'text-secondary',
     },
     {
         icon: Rocket,
         title: 'Rapid Development',
         description: 'Ship features 10x faster with pre-built components',
-        color: 'text-accent-purple',
+        color: 'text-accent',
     },
 ]
 
@@ -107,7 +107,7 @@ export function FeaturesSection() {
                     <h2 className="text-4xl lg:text-5xl font-bold mb-4">
                         Everything You Need to
                         <br />
-                        <span className="text-gradient-cyber">Build Amazing Backends</span>
+                        <span className="text-gradient-primary">Build Amazing Backends</span>
                     </h2>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Our templates come packed with features that developers love
@@ -126,10 +126,10 @@ export function FeaturesSection() {
                             whileHover={{ y: -5 }}
                             className="card-glass group cursor-pointer"
                         >
-                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-primary-blue/20 to-neon-cyan/20 flex items-center justify-center mb-4 group-hover:shadow-glow-md transition-all duration-300`}>
+                            <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-all duration-300`}>
                                 <feature.icon className={`w-6 h-6 ${feature.color}`} />
                             </div>
-                            <h3 className="text-xl font-bold text-text-primary mb-2 group-hover:text-gradient-blue transition-all">
+                            <h3 className="text-xl font-bold text-text-primary mb-2 group-hover:text-primary transition-all">
                                 {feature.title}
                             </h3>
                             <p className="text-text-secondary">

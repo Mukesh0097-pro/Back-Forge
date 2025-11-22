@@ -71,8 +71,8 @@ export function PricingSection() {
     return (
         <section className="relative py-20 overflow-hidden">
             {/* Background effects */}
-            <div className="absolute inset-0 bg-gradient-to-b from-bg-deep via-royal-blue/5 to-bg-deep" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-blue/10 rounded-full blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-b from-bg-deep via-primary/5 to-bg-deep" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -84,7 +84,7 @@ export function PricingSection() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-                        Simple, <span className="text-gradient-cyber">Transparent</span> Pricing
+                        Simple, <span className="text-gradient-primary">Transparent</span> Pricing
                     </h2>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Choose the perfect plan for your needs. All plans include lifetime access to purchased templates.
@@ -102,14 +102,14 @@ export function PricingSection() {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             whileHover={{ y: -8 }}
                             className={`relative ${tier.popular
-                                    ? 'card-neon shadow-neon-cyan scale-105 md:scale-110'
-                                    : 'card-glass'
+                                ? 'card-premium border-primary/50 scale-105 md:scale-110 z-10'
+                                : 'card-glass'
                                 }`}
                         >
                             {/* Popular Badge */}
                             {tier.popular && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                                    <div className="px-4 py-1 bg-gradient-to-r from-neon-cyan to-primary-blue rounded-full text-sm font-bold text-bg-deep shadow-neon-cyan">
+                                    <div className="px-4 py-1 bg-gradient-primary rounded-full text-sm font-bold text-white shadow-lg shadow-primary/20">
                                         Most Popular
                                     </div>
                                 </div>
@@ -117,8 +117,8 @@ export function PricingSection() {
 
                             {/* Icon */}
                             <div className={`w-16 h-16 rounded-2xl mb-6 flex items-center justify-center ${tier.popular
-                                    ? 'bg-gradient-to-br from-neon-cyan to-primary-blue shadow-neon-cyan'
-                                    : 'bg-gradient-to-br from-primary-blue to-royal-blue shadow-glow-md'
+                                ? 'bg-gradient-primary shadow-lg shadow-primary/20'
+                                : 'bg-white/5'
                                 }`}>
                                 <tier.icon className="w-8 h-8 text-white" />
                             </div>
@@ -130,7 +130,7 @@ export function PricingSection() {
                             {/* Price */}
                             <div className="mb-6">
                                 <div className="flex items-baseline">
-                                    <span className="text-5xl font-bold text-gradient-blue">${tier.price}</span>
+                                    <span className="text-5xl font-bold text-text-primary">${tier.price}</span>
                                     <span className="text-text-secondary ml-2">/month</span>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ export function PricingSection() {
                             <ul className="space-y-3 mb-8">
                                 {tier.features.map((feature) => (
                                     <li key={feature} className="flex items-start space-x-3">
-                                        <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${tier.popular ? 'text-neon-cyan' : 'text-primary-blue'
+                                        <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${tier.popular ? 'text-primary' : 'text-text-secondary'
                                             }`} />
                                         <span className="text-text-secondary">{feature}</span>
                                     </li>
@@ -149,7 +149,7 @@ export function PricingSection() {
                             {/* CTA */}
                             <Link
                                 to={tier.ctaLink}
-                                className={tier.popular ? 'btn-neon w-full block text-center' : 'btn-primary w-full block text-center'}
+                                className={tier.popular ? 'btn-primary w-full block text-center' : 'btn-secondary w-full block text-center'}
                             >
                                 {tier.cta}
                             </Link>

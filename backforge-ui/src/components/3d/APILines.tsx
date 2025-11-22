@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Line } from '@react-three/drei'
 import * as THREE from 'three'
@@ -8,12 +8,12 @@ interface APILinesProps {
     color?: string
 }
 
-export function APILines({ count = 10, color = '#60A5FA' }: APILinesProps) {
+export function APILines({ count = 10, color = '#00F3FF' }: APILinesProps) {
     const groupRef = useRef<THREE.Group>(null)
 
-    const lines = Array.from({ length: count }, (_, i) => {
+    const lines = useMemo(() => Array.from({ length: count }, (_, i) => {
         const angle = (i / count) * Math.PI * 2
-        const radius = 2
+        const radius = 4 // Increased radius to be visible outside the central cube
         const start: [number, number, number] = [
             Math.cos(angle) * radius,
             Math.sin(angle) * radius,
@@ -22,7 +22,7 @@ export function APILines({ count = 10, color = '#60A5FA' }: APILinesProps) {
         const end: [number, number, number] = [0, 0, 0]
 
         return { start, end }
-    })
+    }), [count])
 
     useFrame((state) => {
         if (groupRef.current) {

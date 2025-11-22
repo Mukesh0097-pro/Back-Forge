@@ -1,33 +1,29 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { NeonCube } from './NeonCube'
-import { FloatingParticles } from './FloatingParticles'
-import { APILines } from './APILines'
+import { OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
+import { DataWave } from './DataWave'
 
 export function HeroScene() {
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full absolute top-0 left-0 -z-10">
             <Canvas>
-                <PerspectiveCamera makeDefault position={[0, 0, 8]} />
+                <PerspectiveCamera makeDefault position={[0, 8, 25]} fov={55} />
                 <OrbitControls
                     enableZoom={false}
                     enablePan={false}
                     autoRotate
                     autoRotateSpeed={0.5}
+                    maxPolarAngle={Math.PI / 2}
+                    minPolarAngle={Math.PI / 3}
                 />
 
                 {/* Lighting */}
-                <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} intensity={1} color="#3B82F6" />
-                <pointLight position={[-10, -10, -10]} intensity={0.5} color="#22D3EE" />
+                <ambientLight intensity={0.2} />
 
-                {/* 3D Elements */}
-                <NeonCube position={[0, 0, 0]} size={2} color="#3B82F6" rotationSpeed={0.005} />
-                <NeonCube position={[3, 1, -2]} size={1} color="#22D3EE" rotationSpeed={0.008} />
-                <NeonCube position={[-3, -1, -2]} size={0.8} color="#A78BFA" rotationSpeed={0.006} />
+                {/* Background Stars */}
+                <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={0.5} />
 
-                <FloatingParticles count={300} radius={6} color="#22D3EE" />
-                <APILines count={12} color="#60A5FA" />
+                {/* Main Data Wave */}
+                <DataWave />
             </Canvas>
         </div>
     )

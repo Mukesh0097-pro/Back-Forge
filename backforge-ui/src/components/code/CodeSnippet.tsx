@@ -40,11 +40,11 @@ export function CodeSnippet({
         <div className="code-block group">
             {/* Header */}
             {title && (
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-neon-cyan/20">
-                    <span className="text-sm font-mono text-neon-cyan">{title}</span>
+                <div className="flex items-center justify-between mb-4 pb-3 border-b border-primary/20">
+                    <span className="text-sm font-mono text-primary">{title}</span>
                     <button
                         onClick={handleCopy}
-                        className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-primary-blue/10 hover:bg-primary-blue/20 text-text-secondary hover:text-neon-cyan transition-all duration-300"
+                        className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-text-secondary hover:text-primary transition-all duration-300"
                     >
                         {copied ? (
                             <>
@@ -68,7 +68,7 @@ export function CodeSnippet({
                         ref={codeRef}
                         className={`language-${language} !bg-transparent text-sm`}
                         style={{
-                            textShadow: '0 0 10px rgba(34, 211, 238, 0.3)',
+                            textShadow: '0 0 10px rgba(0, 243, 255, 0.3)',
                         }}
                     >
                         {code}
@@ -77,7 +77,7 @@ export function CodeSnippet({
             </div>
 
             {/* Glow effect on hover */}
-            <div className="absolute inset-0 rounded-lg border border-neon-cyan/0 group-hover:border-neon-cyan/50 transition-all duration-300 pointer-events-none" />
+            <div className="absolute inset-0 rounded-lg border border-primary/0 group-hover:border-primary/50 transition-all duration-300 pointer-events-none" />
         </div>
     )
 }

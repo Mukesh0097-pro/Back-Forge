@@ -7,102 +7,60 @@ export default {
     theme: {
         extend: {
             colors: {
-                // BackForge Brand Colors
+                // BackForge Premium Black + Neon Blue Theme
                 primary: {
-                    blue: '#3B82F6',
-                    DEFAULT: '#3B82F6',
+                    DEFAULT: '#00F3FF', // Neon Cyan
+                    dark: '#00C2CC',    // Darker Cyan
+                    light: '#5FF9FF',   // Lighter Cyan
                 },
-                royal: {
-                    blue: '#1D4ED8',
-                    DEFAULT: '#1D4ED8',
-                },
-                neon: {
-                    cyan: '#22D3EE',
-                    DEFAULT: '#22D3EE',
-                },
-                sky: {
-                    glow: '#60A5FA',
-                    DEFAULT: '#60A5FA',
+                secondary: {
+                    DEFAULT: '#2D55FF', // Electric Blue
+                    dark: '#1A3BCC',    // Darker Electric Blue
                 },
                 accent: {
-                    purple: '#A78BFA',
-                    DEFAULT: '#A78BFA',
+                    DEFAULT: '#D946EF', // Neon Fuchsia (for high contrast)
+                    glow: '#E879F9',    // Lighter Fuchsia
                 },
                 bg: {
-                    deep: '#0B0B0D',
-                    card: '#15151A',
-                    DEFAULT: '#0B0B0D',
+                    deep: '#000000',    // Pure Black
+                    card: '#0A0A0A',    // Almost Black
+                    surface: '#121212', // Dark Gray
                 },
                 text: {
-                    primary: '#F8FAFC',
-                    secondary: '#94A3B8',
-                    DEFAULT: '#F8FAFC',
+                    primary: '#FFFFFF',   // Pure White
+                    secondary: '#94A3B8', // Slate 400
+                    muted: '#64748B',     // Slate 500
                 },
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
                 mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
             },
             boxShadow: {
-                'neon-blue': '0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)',
-                'neon-cyan': '0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3)',
-                'neon-purple': '0 0 20px rgba(167, 139, 250, 0.5), 0 0 40px rgba(167, 139, 250, 0.3)',
-                'glow-sm': '0 0 10px rgba(59, 130, 246, 0.3)',
-                'glow-md': '0 0 20px rgba(59, 130, 246, 0.4)',
-                'glow-lg': '0 0 30px rgba(59, 130, 246, 0.5)',
-                'inner-glow': 'inset 0 0 20px rgba(59, 130, 246, 0.2)',
+                'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.5)',
+                'card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
+                'card-hover': '0 10px 15px -3px rgba(0, 243, 255, 0.1), 0 4px 6px -2px rgba(0, 243, 255, 0.05)',
+                'glow-sm': '0 0 15px rgba(0, 243, 255, 0.3)', // Neon Cyan Glow
+                'glow-md': '0 0 30px rgba(0, 243, 255, 0.4)',
+                'glow-lg': '0 0 50px rgba(0, 243, 255, 0.5)',
             },
             backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-                'gradient-cyber': 'linear-gradient(135deg, #0B0B0D 0%, #1D4ED8 50%, #22D3EE 100%)',
-                'gradient-card': 'linear-gradient(135deg, rgba(21, 21, 26, 0.8) 0%, rgba(29, 78, 216, 0.1) 100%)',
+                'gradient-primary': 'linear-gradient(135deg, #00F3FF 0%, #2D55FF 100%)',
+                'gradient-dark': 'linear-gradient(to bottom, #000000, #0A0A0A)',
+                'gradient-card': 'linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)',
+                'gradient-glow': 'radial-gradient(circle at center, rgba(0, 243, 255, 0.15) 0%, transparent 70%)',
             },
             animation: {
-                'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-                'float': 'float 3s ease-in-out infinite',
-                'rotate-slow': 'rotate-slow 20s linear infinite',
-                'scale-pulse': 'scale-pulse 2s ease-in-out infinite',
-                'fade-in': 'fade-in 0.5s ease-out',
-                'slide-up': 'slide-up 0.5s ease-out',
-                'slide-down': 'slide-down 0.5s ease-out',
+                'float': 'float 6s ease-in-out infinite',
+                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'spin-slow': 'spin 12s linear infinite',
             },
             keyframes: {
-                'glow-pulse': {
-                    '0%, 100%': {
-                        boxShadow: '0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)',
-                    },
-                    '50%': {
-                        boxShadow: '0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.5)',
-                    },
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
                 },
-                'float': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-20px)' },
-                },
-                'rotate-slow': {
-                    '0%': { transform: 'rotate(0deg)' },
-                    '100%': { transform: 'rotate(360deg)' },
-                },
-                'scale-pulse': {
-                    '0%, 100%': { transform: 'scale(1)' },
-                    '50%': { transform: 'scale(1.05)' },
-                },
-                'fade-in': {
-                    '0%': { opacity: '0' },
-                    '100%': { opacity: '1' },
-                },
-                'slide-up': {
-                    '0%': { transform: 'translateY(20px)', opacity: '0' },
-                    '100%': { transform: 'translateY(0)', opacity: '1' },
-                },
-                'slide-down': {
-                    '0%': { transform: 'translateY(-20px)', opacity: '0' },
-                    '100%': { transform: 'translateY(0)', opacity: '1' },
-                },
-            },
-            backdropBlur: {
-                xs: '2px',
             },
         },
     },
